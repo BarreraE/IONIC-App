@@ -1,6 +1,13 @@
-<app-header title="alert page"></app-header>
-<ion-content>
-  <h1>
-    Hola amigos!!!
-  </h1>
+<app-header [title]="text || 'Welcome!!!'"></app-header>
+<ion-content padding>
+  <ion-button expand="full"
+              color="primary"
+              (click)="presentAlert()">
+        Mostrar Alerta
+  </ion-button>
+  <ion-button expand="full"
+              color="secondary"
+              (click)="presentAlertPrompt()">
+        Mostrar Input
+</ion-button>
 </ion-content>

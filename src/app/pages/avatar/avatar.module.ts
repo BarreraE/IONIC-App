@@ -1,0 +1,28 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
+
+import { IonicModule } from '@ionic/angular';
+
+import { AvatarPage } from './avatar.page';
+import { ComponentsModule } from '../../components/components.module';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: AvatarPage
+  }
+];
+
+@NgModule({
+  imports: [
+    CommonModule,
+    ComponentsModule,//Se debe importar el componentMain que contiene componentes, para que esten disponibles desde aquí
+    FormsModule,
+    IonicModule,
+    RouterModule.forChild(routes)
+  ],
+  declarations: [AvatarPage]
+})
+export class AvatarPageModule {}
